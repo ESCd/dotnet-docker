@@ -6,12 +6,16 @@ The following images are based on [`mcr.microsoft.com/artifact/mar/mssql/server`
 
 Useful for multi-team or feature based development, running integration tests, generating migrations, *and more*...
 
-| Image Variant                           | .NET Version | SQL Version   |
-| --------------------------------------- | ------------ | ------------- |
-| `escd/dotnet-mssql-sdk:9.0-2025-latest` | `net9.0`     | `2025-latest` |
-| `escd/dotnet-mssql-sdk:9.0-2022-latest` | `net9.0`     | `2022-latest` |
+| Image Variant                            | .NET Version | SQL Version   |
+| ---------------------------------------- | ------------ | ------------- |
+| `escd/dotnet-mssql-sdk:9.0-2025-latest`  | `net9.0`     | `2025-latest` |
+| `escd/dotnet-mssql-sdk:9.0-2022-latest`  | `net9.0`     | `2022-latest` |
+| `escd/dotnet-mssql-sdk:10.0-2025-latest` | `net10.0`    | `2025-latest` |
+| `escd/dotnet-mssql-sdk:10.0-2022-latest` | `net10.0`    | `2022-latest` |
+| `escd/dotnet-mssql-sdk:11.0-2025-latest` | `net11.0`    | `2025-latest` |
+| `escd/dotnet-mssql-sdk:11.0-2022-latest` | `net11.0`    | `2022-latest` |
 
-> *Images are based on Ubuntu (version determined by upstream source), with the following pre-installed software:*
+> *Images are based on upstream MSSQL images, with the following pre-installed software:*
 > - `curl`
 > - `dotnet`
 > - `dotnet-ef` (.NET Tool)
@@ -31,12 +35,25 @@ The following images are based on [`mcr.microsoft.com/artifact/mar/dotnet/sdk`](
 
 Useful for building Blazor Wasm or .NET Browser projects.
 
-| Image Variant              | .NET Version |
-| -------------------------- | ------------ |
-| `escd/dotnet-wasm-sdk:9.0` | `net9.0`     |
-| `escd/dotnet-wasm-sdk:8.0` | `net8.0`     |
+| Image Variant                                  | .NET Version |
+| ---------------------------------------------- | ------------ |
+| `escd/dotnet-wasm-sdk:8.0`                     | `net8.0`     |
+| `escd/dotnet-wasm-sdk:9.0`                     | `net9.0`     |
+| `escd/dotnet-wasm-sdk:10.0`                    | `net10.0`    |
+| `escd/dotnet-wasm-sdk:10.0-aot`                | `net10.0`    |
+| `escd/dotnet-wasm-sdk:10.0-noble-amd64`        | `net10.0`    |
+| `escd/dotnet-wasm-sdk:10.0-noble-aot`          | `net10.0`    |
+| `escd/dotnet-wasm-sdk:10.0-noble-aot-amd64`    | `net10.0`    |
+| `escd/dotnet-wasm-sdk:10.0-resolute-amd64`     | `net10.0`    |
+| `escd/dotnet-wasm-sdk:10.0-resolute-aot`       | `net10.0`    |
+| `escd/dotnet-wasm-sdk:10.0-resolute-aot-amd64` | `net10.0`    |
+| `escd/dotnet-wasm-sdk:11.0`                    | `net11.0`    |
+| `escd/dotnet-wasm-sdk:11.0-aot`                | `net11.0`    |
+| `escd/dotnet-wasm-sdk:11.0-resolute-amd64`     | `net11.0`    |
+| `escd/dotnet-wasm-sdk:11.0-resolute-aot`       | `net11.0`    |
+| `escd/dotnet-wasm-sdk:11.0-resolute-aot-amd64` | `net11.0`    |
 
-> *Images are based on Debian 12 (bookworm-slim), with the following pre-installed software:*
+> *Images are based on upstream dotnet sdk images, with the following pre-installed software:*
 > - `curl`
 > - `dotnet`
 > - `git`
