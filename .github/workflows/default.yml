@@ -17,18 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        dotnet_version:
-          [
-            "9.0",
-            "10.0",
-            "10.0-aot",
-            "10.0-noble-aot",
-            "10.0-noble-aot-amd64",
-            "11.0",
-            "11.0-aot",
-            "11.0-noble-aot",
-            "11.0-noble-aot-amd64",
-          ]
+        dotnet_version: ["9.0", "10.0", "11.0"]
         sql_version: [2025-latest, 2022-latest]
 
     steps:
