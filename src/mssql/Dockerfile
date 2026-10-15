@@ -1,12 +1,14 @@
-ARG DOTNET_VERSION=10.0
-ARG SQL_VERSION=2022-latest
+ARG ESCD_DOTNET_VERSION=11.0
+ARG ESCD_SQL_VERSION=2022-latest
 
-FROM mcr.microsoft.com/dotnet/sdk:${DOTNET_VERSION} AS sdk
+FROM mcr.microsoft.com/dotnet/sdk:${ESCD_DOTNET_VERSION} AS sdk
 
-COPY src/mssql/${DOTNET_VERSION}/dotnet-tools.json /dotnet-tools.json
+ARG ESCD_DOTNET_VERSION
+
+COPY src/mssql/${ESCD_DOTNET_VERSION}/dotnet-tools.json /dotnet-tools.json
 RUN dotnet tool restore && dotnet nuget locals all --clear
 
-FROM mcr.microsoft.com/mssql/server:${SQL_VERSION} AS dotnet-mssql-sdk
+FROM mcr.microsoft.com/mssql/server:${ESCD_SQL_VERSION} AS dotnet-mssql-sdk
 
 ENV ACCEPT_EULA=Y
 ENV DOTNET_GENERATE_ASPNET_CERTIFICATE=false

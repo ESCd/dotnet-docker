@@ -17,7 +17,18 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        dotnet_version: ["9.0", "10.0"]
+        dotnet_version:
+          [
+            "9.0",
+            "10.0",
+            "10.0-aot",
+            "10.0-noble-aot",
+            "10.0-noble-aot-amd64",
+            "11.0",
+            "11.0-aot",
+            "11.0-noble-aot",
+            "11.0-noble-aot-amd64",
+          ]
         sql_version: [2025-latest, 2022-latest]
 
     steps:
@@ -58,8 +69,8 @@ jobs:
             org.opencontainers.image.vendor=Escape Developers, LLC
           push: true
           build-args: |
-            DOTNET_VERSION=${{ matrix.dotnet_version }}
-            SQL_VERSION=${{ matrix.sql_version }}
+            ESCD_DOTNET_VERSION=${{ matrix.dotnet_version }}
+            ESCD_SQL_VERSION=${{ matrix.sql_version }}
           tags: ghcr.io/escd/dotnet-mssql-sdk:${{ matrix.dotnet_version }}-${{ matrix.sql_version }}
 
       - name: publish attestation
@@ -81,7 +92,19 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        dotnet_version: ["8.0", "9.0", "10.0", "10.0-aot", "10.0-noble-aot", "10.0-noble-aot-amd64"]
+        dotnet_version:
+          [
+            "8.0",
+            "9.0",
+            "10.0",
+            "10.0-aot",
+            "10.0-noble-aot",
+            "10.0-noble-aot-amd64",
+            "11.0",
+            "11.0-aot",
+            "11.0-noble-aot",
+            "11.0-noble-aot-amd64",
+          ]
 
     steps:
       - name: checkout
@@ -121,7 +144,7 @@ jobs:
             org.opencontainers.image.vendor=Escape Developers, LLC
           push: true
           build-args: |
-            DOTNET_VERSION=${{ matrix.dotnet_version }}
+            ESCD_DOTNET_VERSION=${{ matrix.dotnet_version }}
           tags: ghcr.io/escd/dotnet-wasm-sdk:${{ matrix.dotnet_version }}
 
       - name: publish attestation

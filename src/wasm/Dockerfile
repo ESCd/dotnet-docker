@@ -1,7 +1,7 @@
-ARG DOTNET_VERSION=10.0
+ARG ESCD_DOTNET_VERSION=11.0
 
-FROM node:24-bookworm-slim AS node-x
-FROM mcr.microsoft.com/dotnet/sdk:${DOTNET_VERSION} AS sdk
+FROM node:26-bookworm-slim AS node-x
+FROM mcr.microsoft.com/dotnet/sdk:${ESCD_DOTNET_VERSION} AS sdk
 
 ENV DOTNET_RUNNING_IN_CONTAINER=true
 ENV DOTNET_RUNNING_IN_CONTAINERS=true
