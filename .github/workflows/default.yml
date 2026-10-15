@@ -87,12 +87,17 @@ jobs:
             "9.0",
             "10.0",
             "10.0-aot",
+            "10.0-noble-amd64",
             "10.0-noble-aot",
             "10.0-noble-aot-amd64",
+            "10.0-resolute-amd64",
+            "10.0-resolute-aot",
+            "10.0-resolute-aot-amd64",
             "11.0",
             "11.0-aot",
-            "11.0-noble-aot",
-            "11.0-noble-aot-amd64",
+            "11.0-resolute-amd64",
+            "11.0-resolute-aot",
+            "11.0-resolute-aot-amd64",
           ]
 
     steps:

@@ -11,7 +11,7 @@ Useful for multi-team or feature based development, running integration tests, g
 | `escd/dotnet-mssql-sdk:9.0-2025-latest` | `net9.0`     | `2025-latest` |
 | `escd/dotnet-mssql-sdk:9.0-2022-latest` | `net9.0`     | `2022-latest` |
 
-> *Images are based on Ubuntu 22.04 (jammy), with the following pre-installed software:*
+> *Images are based on Ubuntu (version determined by upstream source), with the following pre-installed software:*
 > - `curl`
 > - `dotnet`
 > - `dotnet-ef` (.NET Tool)
@@ -40,7 +40,7 @@ Useful for building Blazor Wasm or .NET Browser projects.
 > - `curl`
 > - `dotnet`
 > - `git`
-> - `nodejs`
+> - `nodejs` (`v26`)
 > - `pwsh` (PowerShell)
 > - `python3`
 > - `wasm-tools` (.NET Workload)
